@@ -19,13 +19,24 @@ namespace MyGolfSocietyApp
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddNewCourse addnew = new AddNewCourse();
-            addnew.ShowDialog();
+            AddNewCourse addnewCourse = new AddNewCourse();
+            addnewCourse.ShowDialog();
         }
 
         
 
         private void menuViewPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuNewPlayer_Click(object sender, EventArgs e)
+        {
+            AddNewPlayer addNewPlayer = new AddNewPlayer();
+            addNewPlayer.ShowDialog();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
         }

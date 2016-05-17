@@ -33,17 +33,19 @@
             this.playerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuNewPlayer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuViewPlayer = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuListPlayers = new System.Windows.Forms.ToolStripMenuItem();
+            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.courseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditCourse = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuViewCourse = new System.Windows.Forms.ToolStripMenuItem();
             this.outingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAddOuting = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditOuting = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuViewOuting = new System.Windows.Forms.ToolStripMenuItem();
             this.tournamentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAddTournament = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuViewTournament = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +68,9 @@
             // 
             this.playerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuNewPlayer,
-            this.menuViewPlayer});
+            this.menuViewPlayer,
+            this.menuListPlayers,
+            this.listToolStripMenuItem});
             this.playerToolStripMenuItem.Name = "playerToolStripMenuItem";
             this.playerToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.playerToolStripMenuItem.Text = "Player";
@@ -74,23 +78,35 @@
             // menuNewPlayer
             // 
             this.menuNewPlayer.Name = "menuNewPlayer";
-            this.menuNewPlayer.Size = new System.Drawing.Size(152, 22);
+            this.menuNewPlayer.Size = new System.Drawing.Size(99, 22);
             this.menuNewPlayer.Text = "New";
-            //this.menuNewPlayer.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            this.menuNewPlayer.Click += new System.EventHandler(this.menuNewPlayer_Click);
             // 
             // menuViewPlayer
             // 
             this.menuViewPlayer.Name = "menuViewPlayer";
-            this.menuViewPlayer.Size = new System.Drawing.Size(152, 22);
+            this.menuViewPlayer.Size = new System.Drawing.Size(99, 22);
             this.menuViewPlayer.Text = "View";
             this.menuViewPlayer.Click += new System.EventHandler(this.menuViewPlayer_Click);
+            // 
+            // menuListPlayers
+            // 
+            this.menuListPlayers.Name = "menuListPlayers";
+            this.menuListPlayers.Size = new System.Drawing.Size(99, 22);
+            this.menuListPlayers.Text = "Edit";
+            // 
+            // listToolStripMenuItem
+            // 
+            this.listToolStripMenuItem.Name = "listToolStripMenuItem";
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.listToolStripMenuItem.Text = "List";
             // 
             // courseToolStripMenuItem
             // 
             this.courseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.viewToolStripMenuItem4});
+            this.menuEditCourse,
+            this.menuViewCourse});
             this.courseToolStripMenuItem.Name = "courseToolStripMenuItem";
             this.courseToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.courseToolStripMenuItem.Text = "Course";
@@ -102,71 +118,71 @@
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
-            // editToolStripMenuItem
+            // menuEditCourse
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.menuEditCourse.Name = "menuEditCourse";
+            this.menuEditCourse.Size = new System.Drawing.Size(99, 22);
+            this.menuEditCourse.Text = "Edit";
             // 
-            // viewToolStripMenuItem4
+            // menuViewCourse
             // 
-            this.viewToolStripMenuItem4.Name = "viewToolStripMenuItem4";
-            this.viewToolStripMenuItem4.Size = new System.Drawing.Size(99, 22);
-            this.viewToolStripMenuItem4.Text = "View";
+            this.menuViewCourse.Name = "menuViewCourse";
+            this.menuViewCourse.Size = new System.Drawing.Size(99, 22);
+            this.menuViewCourse.Text = "View";
             // 
             // outingToolStripMenuItem
             // 
             this.outingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem1,
-            this.viewToolStripMenuItem1,
-            this.viewToolStripMenuItem3});
+            this.menuAddOuting,
+            this.menuEditOuting,
+            this.menuViewOuting});
             this.outingToolStripMenuItem.Name = "outingToolStripMenuItem";
             this.outingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.outingToolStripMenuItem.Text = "Outing";
             // 
-            // addToolStripMenuItem1
+            // menuAddOuting
             // 
-            this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
-            this.addToolStripMenuItem1.Text = "Add";
+            this.menuAddOuting.Name = "menuAddOuting";
+            this.menuAddOuting.Size = new System.Drawing.Size(99, 22);
+            this.menuAddOuting.Text = "Add";
             // 
-            // viewToolStripMenuItem1
+            // menuEditOuting
             // 
-            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
-            this.viewToolStripMenuItem1.Text = "Edit";
+            this.menuEditOuting.Name = "menuEditOuting";
+            this.menuEditOuting.Size = new System.Drawing.Size(99, 22);
+            this.menuEditOuting.Text = "Edit";
             // 
-            // viewToolStripMenuItem3
+            // menuViewOuting
             // 
-            this.viewToolStripMenuItem3.Name = "viewToolStripMenuItem3";
-            this.viewToolStripMenuItem3.Size = new System.Drawing.Size(99, 22);
-            this.viewToolStripMenuItem3.Text = "View";
+            this.menuViewOuting.Name = "menuViewOuting";
+            this.menuViewOuting.Size = new System.Drawing.Size(99, 22);
+            this.menuViewOuting.Text = "View";
             // 
             // tournamentToolStripMenuItem
             // 
             this.tournamentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem2,
-            this.viewToolStripMenuItem2});
+            this.menuAddTournament,
+            this.menuViewTournament});
             this.tournamentToolStripMenuItem.Name = "tournamentToolStripMenuItem";
             this.tournamentToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.tournamentToolStripMenuItem.Text = "Tournament";
             // 
-            // addToolStripMenuItem2
+            // menuAddTournament
             // 
-            this.addToolStripMenuItem2.Name = "addToolStripMenuItem2";
-            this.addToolStripMenuItem2.Size = new System.Drawing.Size(99, 22);
-            this.addToolStripMenuItem2.Text = "Add";
+            this.menuAddTournament.Name = "menuAddTournament";
+            this.menuAddTournament.Size = new System.Drawing.Size(99, 22);
+            this.menuAddTournament.Text = "Add";
             // 
-            // viewToolStripMenuItem2
+            // menuViewTournament
             // 
-            this.viewToolStripMenuItem2.Name = "viewToolStripMenuItem2";
-            this.viewToolStripMenuItem2.Size = new System.Drawing.Size(99, 22);
-            this.viewToolStripMenuItem2.Text = "View";
+            this.menuViewTournament.Name = "menuViewTournament";
+            this.menuViewTournament.Size = new System.Drawing.Size(99, 22);
+            this.menuViewTournament.Text = "View";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(221, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(246, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(419, 426);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -184,6 +200,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -200,15 +217,17 @@
         private System.Windows.Forms.ToolStripMenuItem menuViewPlayer;
         private System.Windows.Forms.ToolStripMenuItem courseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuEditCourse;
         private System.Windows.Forms.ToolStripMenuItem outingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menuAddOuting;
+        private System.Windows.Forms.ToolStripMenuItem menuEditOuting;
         private System.Windows.Forms.ToolStripMenuItem tournamentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem menuAddTournament;
+        private System.Windows.Forms.ToolStripMenuItem menuViewTournament;
+        private System.Windows.Forms.ToolStripMenuItem menuViewCourse;
+        private System.Windows.Forms.ToolStripMenuItem menuViewOuting;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem menuListPlayers;
+        private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
     }
 }

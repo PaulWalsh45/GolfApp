@@ -52,11 +52,23 @@
     <Compile Include="AddNewCourse.Designer.cs">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewPlayer.Designer.cs">
+      <DependentUpon>AddNewPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPlayer.Designer.cs">
+      <DependentUpon>EditPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -69,8 +81,14 @@
     <EmbeddedResource Include="AddNewCourse.resx">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewPlayer.resx">
+      <DependentUpon>AddNewPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPlayer.resx">
+      <DependentUpon>EditPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -83,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +125,10 @@
       <Project>{d4ee67aa-3bb1-46bb-8b25-5470d2e8e6ec}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\default_logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
