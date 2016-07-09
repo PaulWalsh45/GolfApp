@@ -6,21 +6,16 @@ using System.Threading.Tasks;
 
 namespace BIZ
 {
-    public class Course
+    public class Course:Contact
     {
         public string Name { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
         public int[] HolePars { get; set; }
         public int[] HoleIndexs { get; set; }
 
-        public Course()
-        {
-
-        }
+       
 
         public Course(string name, string address, string phone, string email, int[] par,int[] index)
+            : base(address, phone, email)
         {
             Name = name;
             Address = address;
@@ -30,7 +25,7 @@ namespace BIZ
             HoleIndexs = index;
         }
 
-        Course course = new Course();
+        
         
         
      

@@ -17,11 +17,7 @@ namespace MyGolfSocietyApp
             InitializeComponent();
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AddNewCourse addnewCourse = new AddNewCourse();
-            addnewCourse.ShowDialog();
-        }
+        
 
         
 
@@ -39,6 +35,24 @@ namespace MyGolfSocietyApp
         private void Dashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void newOutingMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddNewOuting newOuting = new AddNewOuting();
+            newOuting.ShowDialog();
+        }
+
+        private void newCourseMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewCourse addnewCourse = new AddNewCourse();
+            addnewCourse.ShowDialog();
+        }
+
+        private void listPlayersMenuItem_Click(object sender, EventArgs e)
+        {
+            ListPlayers listAllMembers = new ListPlayers();
+            listAllMembers.ShowDialog();
         }
     }
 }

@@ -32,7 +32,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnSaveChangesToPlayer = new System.Windows.Forms.Button();
             this.btnChangePlayerImage = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -45,6 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picBoxPlayer = new System.Windows.Forms.PictureBox();
+            this.cbxAdjust = new System.Windows.Forms.ComboBox();
+            this.cbxHandicap = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,14 +87,7 @@
             this.btnChangePlayerImage.TabIndex = 19;
             this.btnChangePlayerImage.Text = "Change Image";
             this.btnChangePlayerImage.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(591, 65);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 23);
-            this.textBox6.TabIndex = 17;
+            this.btnChangePlayerImage.Click += new System.EventHandler(this.btnChangePlayerImage_Click);
             // 
             // textBox5
             // 
@@ -129,7 +124,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(331, 65);
+            this.textBox1.Location = new System.Drawing.Point(464, 33);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 23);
             this.textBox1.TabIndex = 13;
@@ -138,7 +133,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(517, 65);
+            this.label6.Location = new System.Drawing.Point(256, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 11;
@@ -188,7 +183,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 65);
+            this.label1.Location = new System.Drawing.Point(400, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 12;
@@ -204,17 +199,99 @@
             this.picBoxPlayer.TabIndex = 6;
             this.picBoxPlayer.TabStop = false;
             // 
+            // cbxAdjust
+            // 
+            this.cbxAdjust.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAdjust.FormattingEnabled = true;
+            this.cbxAdjust.Items.AddRange(new object[] {
+            "-5",
+            "-4",
+            "-3",
+            "-2",
+            "-1",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbxAdjust.Location = new System.Drawing.Point(450, 69);
+            this.cbxAdjust.Name = "cbxAdjust";
+            this.cbxAdjust.Size = new System.Drawing.Size(52, 24);
+            this.cbxAdjust.TabIndex = 25;
+            // 
+            // cbxHandicap
+            // 
+            this.cbxHandicap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxHandicap.FormattingEnabled = true;
+            this.cbxHandicap.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"});
+            this.cbxHandicap.Location = new System.Drawing.Point(331, 69);
+            this.cbxHandicap.Name = "cbxHandicap";
+            this.cbxHandicap.Size = new System.Drawing.Size(52, 24);
+            this.cbxHandicap.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(397, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 17);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Adjust";
+            // 
             // EditPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(679, 393);
+            this.ClientSize = new System.Drawing.Size(790, 393);
+            this.Controls.Add(this.cbxAdjust);
+            this.Controls.Add(this.cbxHandicap);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSaveChangesToPlayer);
             this.Controls.Add(this.btnChangePlayerImage);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -241,7 +318,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSaveChangesToPlayer;
         private System.Windows.Forms.Button btnChangePlayerImage;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -254,5 +330,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxPlayer;
+        private System.Windows.Forms.ComboBox cbxAdjust;
+        private System.Windows.Forms.ComboBox cbxHandicap;
+        private System.Windows.Forms.Label label8;
     }
 }

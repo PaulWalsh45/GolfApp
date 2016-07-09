@@ -20,16 +20,17 @@ namespace MyGolfSocietyApp
 
         private void btnAddNewCourse_Click(object sender, EventArgs e)
         {
-            Course course = new Course();
+            
             int[] pars = GetPars();
             int[] index = GetIndex();
 
-            course.Name = txtCourseName.Text;
-            course.Address = txtCourseAddress.Text;
-            course.Phone = txtCoursePhone.Text;
-            course.Email = txtCourseEmail.Text;
-            course.HolePars = pars;
-            course.HoleIndexs = index;
+            string name = txtCourseName.Text;
+            string address = txtCourseAddress.Text;
+            string phone = txtCoursePhone.Text;
+            string email = txtCourseEmail.Text;
+
+            Course course = new Course(name,address,phone,email,pars,index);
+
 
 
         }
