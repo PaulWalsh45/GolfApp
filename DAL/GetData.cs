@@ -9,18 +9,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-   public class GetData:DAO
+   public class GetData
     {
-        DataTable dataTable = new DataTable();
-
-        public DataTable GetPlayersFromDbForListPlayersDatagrid()
-        {
-            SqlCommand getPlayers = new SqlCommand("Select PlayerId,PlayerFirstName,PlayerLastName,PlayerHandicap,PlayerAdjust,PlayerJoinDate from Player", OpenDbConnection());
-            SqlDataReader dataReader = getPlayers.ExecuteReader();
-            dataTable.Load(dataReader);
-            CloseDbConnnection();
-
-            return dataTable;
-        }
+        
     }
 }

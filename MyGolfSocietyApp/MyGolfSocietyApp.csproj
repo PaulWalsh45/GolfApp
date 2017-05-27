@@ -48,9 +48,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,43 +72,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course\AddNewCourse.cs">
+    <Compile Include="Forms\ListCompetitions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Course\AddNewCourse.Designer.cs">
-      <DependentUpon>AddNewCourse.cs</DependentUpon>
+    <Compile Include="Forms\ListCompetitions.Designer.cs">
+      <DependentUpon>ListCompetitions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player\ListPlayers.cs">
+    <Compile Include="Forms\EditCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player\ListPlayers.Designer.cs">
+    <Compile Include="Forms\EditCourse.Designer.cs">
+      <DependentUpon>EditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListCourses.Designer.cs">
+      <DependentUpon>ListCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GolfAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GolfAppDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListPlayers.Designer.cs">
       <DependentUpon>ListPlayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Outing\AddNewOuting.cs">
+    <Compile Include="Forms\AddNewCompetition.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Outing\AddNewOuting.Designer.cs">
-      <DependentUpon>AddNewOuting.cs</DependentUpon>
+    <Compile Include="Forms\AddNewCompetition.Designer.cs">
+      <DependentUpon>AddNewCompetition.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Player\AddNewPlayer.cs">
+    <Compile Include="Forms\EditPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player\AddNewPlayer.Designer.cs">
-      <DependentUpon>AddNewPlayer.cs</DependentUpon>
+    <Compile Include="Forms\EditPlayer.Designer.cs">
+      <DependentUpon>EditPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Player\EditPlayer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Player\EditPlayer.Designer.cs">
-      <DependentUpon>EditPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Form1.cs">
       <SubType>Form</SubType>
@@ -108,26 +129,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Course\AddNewCourse.resx">
-      <DependentUpon>AddNewCourse.cs</DependentUpon>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Forms\ListCompetitions.resx">
+      <DependentUpon>ListCompetitions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Outing\AddNewOuting.resx">
-      <DependentUpon>AddNewOuting.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EditCourse.resx">
+      <DependentUpon>EditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddNewCompetition.resx">
+      <DependentUpon>AddNewCompetition.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Player\AddNewPlayer.resx">
-      <DependentUpon>AddNewPlayer.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ListCourses.resx">
+      <DependentUpon>ListCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPlayer.resx">
+      <DependentUpon>EditPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Player\EditPlayer.resx">
-      <DependentUpon>EditPlayer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Player\ListPlayers.resx">
+    <EmbeddedResource Include="Forms\ListPlayers.resx">
       <DependentUpon>ListPlayers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,6 +176,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="GolfAppDataSet.xsc">
+      <DependentUpon>GolfAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GolfAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GolfAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GolfAppDataSet.xss">
+      <DependentUpon>GolfAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DAL.Competition.datasource" />
+    <None Include="Properties\DataSources\DAL.Course.datasource" />
+    <None Include="Properties\DataSources\DAL.Player.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,13 +210,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BIZ\BIZ.csproj">
-      <Project>{160c04d2-332c-4ce5-987f-492fccf2c8ff}</Project>
-      <Name>BIZ</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{d4ee67aa-3bb1-46bb-8b25-5470d2e8e6ec}</Project>
       <Name>DAL</Name>
@@ -176,20 +228,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GolfSociety.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="GolfSociety_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>GolfSociety.mdf</DependentUpon>
-    </Content>
     <Content Include="images\default_logo.jpg" />
+    <Content Include="Resources\default_logo.jpg" />
     <None Include="images\search.jpg" />
     <None Include="images\transp logo.gif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tournament\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -73,7 +73,7 @@
             this.menuNewPlayer.Name = "menuNewPlayer";
             this.menuNewPlayer.Size = new System.Drawing.Size(152, 22);
             this.menuNewPlayer.Text = "New";
-            this.menuNewPlayer.Click += new System.EventHandler(this.menuNewPlayer_Click);
+            //this.menuNewPlayer.Click += new System.EventHandler(this.menuNewPlayer_Click);
             // 
             // listPlayersMenuItem
             // 
@@ -96,7 +96,7 @@
             this.newCourseMenuItem.Name = "newCourseMenuItem";
             this.newCourseMenuItem.Size = new System.Drawing.Size(98, 22);
             this.newCourseMenuItem.Text = "New";
-            this.newCourseMenuItem.Click += new System.EventHandler(this.newCourseMenuItem_Click);
+            //this.newCourseMenuItem.Click += new System.EventHandler(this.newCourseMenuItem_Click);
             // 
             // listCoursesMenuItem1
             // 

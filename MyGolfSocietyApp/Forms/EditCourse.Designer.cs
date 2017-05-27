@@ -1,6 +1,6 @@
 ﻿namespace MyGolfSocietyApp
 {
-    partial class AddNewCourse
+    partial class EditCourse
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -104,14 +105,20 @@
             this.txtOut2 = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtOut = new System.Windows.Forms.TextBox();
-            this.btnAddNewCourse = new System.Windows.Forms.Button();
+            this.BottomPanel = new System.Windows.Forms.Panel();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BottomPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 22);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
@@ -121,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 55);
+            this.label2.Location = new System.Drawing.Point(10, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 0;
@@ -131,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 22);
+            this.label3.Location = new System.Drawing.Point(328, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 0;
@@ -141,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(328, 55);
+            this.label4.Location = new System.Drawing.Point(328, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 0;
@@ -149,28 +156,32 @@
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(104, 22);
+            this.txtCourseName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "NAME", true));
+            this.txtCourseName.Location = new System.Drawing.Point(92, 8);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.Size = new System.Drawing.Size(207, 20);
             this.txtCourseName.TabIndex = 0;
             // 
             // txtCourseAddress
             // 
-            this.txtCourseAddress.Location = new System.Drawing.Point(104, 52);
+            this.txtCourseAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "ADDRESS", true));
+            this.txtCourseAddress.Location = new System.Drawing.Point(92, 36);
             this.txtCourseAddress.Name = "txtCourseAddress";
             this.txtCourseAddress.Size = new System.Drawing.Size(207, 20);
             this.txtCourseAddress.TabIndex = 1;
             // 
             // txtCoursePhone
             // 
-            this.txtCoursePhone.Location = new System.Drawing.Point(383, 19);
+            this.txtCoursePhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PHONE", true));
+            this.txtCoursePhone.Location = new System.Drawing.Point(407, 8);
             this.txtCoursePhone.Name = "txtCoursePhone";
-            this.txtCoursePhone.Size = new System.Drawing.Size(117, 20);
+            this.txtCoursePhone.Size = new System.Drawing.Size(162, 20);
             this.txtCoursePhone.TabIndex = 2;
             // 
             // txtCourseEmail
             // 
-            this.txtCourseEmail.Location = new System.Drawing.Point(383, 52);
+            this.txtCourseEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "EMAIL", true));
+            this.txtCourseEmail.Location = new System.Drawing.Point(407, 38);
             this.txtCourseEmail.Name = "txtCourseEmail";
             this.txtCourseEmail.Size = new System.Drawing.Size(162, 20);
             this.txtCourseEmail.TabIndex = 3;
@@ -179,7 +190,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 124);
+            this.label5.Location = new System.Drawing.Point(106, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 17);
             this.label5.TabIndex = 2;
@@ -189,7 +200,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(54, 151);
+            this.label6.Location = new System.Drawing.Point(106, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 2;
@@ -199,7 +210,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(54, 180);
+            this.label7.Location = new System.Drawing.Point(106, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 17);
             this.label7.TabIndex = 2;
@@ -209,7 +220,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(54, 209);
+            this.label8.Location = new System.Drawing.Point(106, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 17);
             this.label8.TabIndex = 2;
@@ -219,7 +230,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(54, 238);
+            this.label9.Location = new System.Drawing.Point(106, 238);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 17);
             this.label9.TabIndex = 2;
@@ -229,7 +240,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(54, 266);
+            this.label10.Location = new System.Drawing.Point(106, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 17);
             this.label10.TabIndex = 2;
@@ -239,7 +250,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(54, 295);
+            this.label11.Location = new System.Drawing.Point(106, 295);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 17);
             this.label11.TabIndex = 2;
@@ -249,7 +260,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(54, 325);
+            this.label12.Location = new System.Drawing.Point(106, 325);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 17);
             this.label12.TabIndex = 2;
@@ -259,7 +270,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(54, 355);
+            this.label13.Location = new System.Drawing.Point(106, 355);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(16, 17);
             this.label13.TabIndex = 2;
@@ -269,7 +280,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(45, 384);
+            this.label14.Location = new System.Drawing.Point(97, 384);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 17);
             this.label14.TabIndex = 2;
@@ -279,7 +290,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(37, 98);
+            this.label15.Location = new System.Drawing.Point(89, 98);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(46, 17);
             this.label15.TabIndex = 2;
@@ -289,7 +300,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(89, 98);
+            this.label16.Location = new System.Drawing.Point(141, 98);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 17);
             this.label16.TabIndex = 2;
@@ -299,7 +310,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(144, 98);
+            this.label17.Location = new System.Drawing.Point(196, 98);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(49, 17);
             this.label17.TabIndex = 2;
@@ -307,7 +318,8 @@
             // 
             // txtPar1
             // 
-            this.txtPar1.Location = new System.Drawing.Point(92, 124);
+            this.txtPar1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_1", true));
+            this.txtPar1.Location = new System.Drawing.Point(144, 124);
             this.txtPar1.Name = "txtPar1";
             this.txtPar1.Size = new System.Drawing.Size(33, 20);
             this.txtPar1.TabIndex = 4;
@@ -315,7 +327,8 @@
             // 
             // txtPar2
             // 
-            this.txtPar2.Location = new System.Drawing.Point(92, 151);
+            this.txtPar2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_2", true));
+            this.txtPar2.Location = new System.Drawing.Point(144, 151);
             this.txtPar2.Name = "txtPar2";
             this.txtPar2.Size = new System.Drawing.Size(33, 20);
             this.txtPar2.TabIndex = 5;
@@ -323,7 +336,8 @@
             // 
             // txtPar3
             // 
-            this.txtPar3.Location = new System.Drawing.Point(92, 177);
+            this.txtPar3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_3", true));
+            this.txtPar3.Location = new System.Drawing.Point(144, 177);
             this.txtPar3.Name = "txtPar3";
             this.txtPar3.Size = new System.Drawing.Size(33, 20);
             this.txtPar3.TabIndex = 6;
@@ -331,7 +345,8 @@
             // 
             // txtPar4
             // 
-            this.txtPar4.Location = new System.Drawing.Point(92, 206);
+            this.txtPar4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_4", true));
+            this.txtPar4.Location = new System.Drawing.Point(144, 206);
             this.txtPar4.Name = "txtPar4";
             this.txtPar4.Size = new System.Drawing.Size(33, 20);
             this.txtPar4.TabIndex = 7;
@@ -339,7 +354,8 @@
             // 
             // txtPar5
             // 
-            this.txtPar5.Location = new System.Drawing.Point(92, 235);
+            this.txtPar5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_5", true));
+            this.txtPar5.Location = new System.Drawing.Point(144, 235);
             this.txtPar5.Name = "txtPar5";
             this.txtPar5.Size = new System.Drawing.Size(33, 20);
             this.txtPar5.TabIndex = 8;
@@ -347,7 +363,8 @@
             // 
             // txtPar6
             // 
-            this.txtPar6.Location = new System.Drawing.Point(92, 261);
+            this.txtPar6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_6", true));
+            this.txtPar6.Location = new System.Drawing.Point(144, 261);
             this.txtPar6.Name = "txtPar6";
             this.txtPar6.Size = new System.Drawing.Size(33, 20);
             this.txtPar6.TabIndex = 9;
@@ -355,7 +372,8 @@
             // 
             // txtPar7
             // 
-            this.txtPar7.Location = new System.Drawing.Point(92, 292);
+            this.txtPar7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_7", true));
+            this.txtPar7.Location = new System.Drawing.Point(144, 292);
             this.txtPar7.Name = "txtPar7";
             this.txtPar7.Size = new System.Drawing.Size(33, 20);
             this.txtPar7.TabIndex = 10;
@@ -363,7 +381,8 @@
             // 
             // txtPar8
             // 
-            this.txtPar8.Location = new System.Drawing.Point(92, 322);
+            this.txtPar8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_8", true));
+            this.txtPar8.Location = new System.Drawing.Point(144, 322);
             this.txtPar8.Name = "txtPar8";
             this.txtPar8.Size = new System.Drawing.Size(33, 20);
             this.txtPar8.TabIndex = 11;
@@ -371,7 +390,8 @@
             // 
             // txtPar9
             // 
-            this.txtPar9.Location = new System.Drawing.Point(92, 352);
+            this.txtPar9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_9", true));
+            this.txtPar9.Location = new System.Drawing.Point(144, 352);
             this.txtPar9.Name = "txtPar9";
             this.txtPar9.Size = new System.Drawing.Size(33, 20);
             this.txtPar9.TabIndex = 12;
@@ -529,6 +549,7 @@
             // 
             // txtPar18
             // 
+            this.txtPar18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_18", true));
             this.txtPar18.Location = new System.Drawing.Point(383, 353);
             this.txtPar18.Name = "txtPar18";
             this.txtPar18.Size = new System.Drawing.Size(33, 20);
@@ -537,6 +558,7 @@
             // 
             // txtPar17
             // 
+            this.txtPar17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_17", true));
             this.txtPar17.Location = new System.Drawing.Point(383, 323);
             this.txtPar17.Name = "txtPar17";
             this.txtPar17.Size = new System.Drawing.Size(33, 20);
@@ -545,6 +567,7 @@
             // 
             // txtPar16
             // 
+            this.txtPar16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_16", true));
             this.txtPar16.Location = new System.Drawing.Point(383, 293);
             this.txtPar16.Name = "txtPar16";
             this.txtPar16.Size = new System.Drawing.Size(33, 20);
@@ -553,6 +576,7 @@
             // 
             // txtPar15
             // 
+            this.txtPar15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_15", true));
             this.txtPar15.Location = new System.Drawing.Point(383, 262);
             this.txtPar15.Name = "txtPar15";
             this.txtPar15.Size = new System.Drawing.Size(33, 20);
@@ -561,6 +585,7 @@
             // 
             // txtPar14
             // 
+            this.txtPar14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_14", true));
             this.txtPar14.Location = new System.Drawing.Point(383, 236);
             this.txtPar14.Name = "txtPar14";
             this.txtPar14.Size = new System.Drawing.Size(33, 20);
@@ -569,6 +594,7 @@
             // 
             // txtPar13
             // 
+            this.txtPar13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_13", true));
             this.txtPar13.Location = new System.Drawing.Point(383, 207);
             this.txtPar13.Name = "txtPar13";
             this.txtPar13.Size = new System.Drawing.Size(33, 20);
@@ -577,6 +603,7 @@
             // 
             // txtPar12
             // 
+            this.txtPar12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_12", true));
             this.txtPar12.Location = new System.Drawing.Point(383, 178);
             this.txtPar12.Name = "txtPar12";
             this.txtPar12.Size = new System.Drawing.Size(33, 20);
@@ -585,6 +612,7 @@
             // 
             // txtPar11
             // 
+            this.txtPar11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_11", true));
             this.txtPar11.Location = new System.Drawing.Point(383, 152);
             this.txtPar11.Name = "txtPar11";
             this.txtPar11.Size = new System.Drawing.Size(33, 20);
@@ -593,6 +621,7 @@
             // 
             // txtPar10
             // 
+            this.txtPar10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_10", true));
             this.txtPar10.Location = new System.Drawing.Point(383, 125);
             this.txtPar10.Name = "txtPar10";
             this.txtPar10.Size = new System.Drawing.Size(33, 20);
@@ -601,7 +630,8 @@
             // 
             // txtIndex9
             // 
-            this.txtIndex9.Location = new System.Drawing.Point(147, 352);
+            this.txtIndex9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_9", true));
+            this.txtIndex9.Location = new System.Drawing.Point(199, 352);
             this.txtIndex9.Name = "txtIndex9";
             this.txtIndex9.Size = new System.Drawing.Size(33, 20);
             this.txtIndex9.TabIndex = 30;
@@ -609,7 +639,8 @@
             // 
             // txtIndex8
             // 
-            this.txtIndex8.Location = new System.Drawing.Point(147, 322);
+            this.txtIndex8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_8", true));
+            this.txtIndex8.Location = new System.Drawing.Point(199, 322);
             this.txtIndex8.Name = "txtIndex8";
             this.txtIndex8.Size = new System.Drawing.Size(33, 20);
             this.txtIndex8.TabIndex = 29;
@@ -617,7 +648,8 @@
             // 
             // txtIndex7
             // 
-            this.txtIndex7.Location = new System.Drawing.Point(147, 292);
+            this.txtIndex7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_7", true));
+            this.txtIndex7.Location = new System.Drawing.Point(199, 292);
             this.txtIndex7.Name = "txtIndex7";
             this.txtIndex7.Size = new System.Drawing.Size(33, 20);
             this.txtIndex7.TabIndex = 28;
@@ -625,7 +657,8 @@
             // 
             // txtIndex6
             // 
-            this.txtIndex6.Location = new System.Drawing.Point(147, 261);
+            this.txtIndex6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_6", true));
+            this.txtIndex6.Location = new System.Drawing.Point(199, 261);
             this.txtIndex6.Name = "txtIndex6";
             this.txtIndex6.Size = new System.Drawing.Size(33, 20);
             this.txtIndex6.TabIndex = 27;
@@ -633,7 +666,8 @@
             // 
             // txtIndex5
             // 
-            this.txtIndex5.Location = new System.Drawing.Point(147, 235);
+            this.txtIndex5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_5", true));
+            this.txtIndex5.Location = new System.Drawing.Point(199, 235);
             this.txtIndex5.Name = "txtIndex5";
             this.txtIndex5.Size = new System.Drawing.Size(33, 20);
             this.txtIndex5.TabIndex = 26;
@@ -641,7 +675,8 @@
             // 
             // txtIndex4
             // 
-            this.txtIndex4.Location = new System.Drawing.Point(147, 206);
+            this.txtIndex4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_4", true));
+            this.txtIndex4.Location = new System.Drawing.Point(199, 206);
             this.txtIndex4.Name = "txtIndex4";
             this.txtIndex4.Size = new System.Drawing.Size(33, 20);
             this.txtIndex4.TabIndex = 25;
@@ -649,7 +684,8 @@
             // 
             // txtIndex3
             // 
-            this.txtIndex3.Location = new System.Drawing.Point(147, 177);
+            this.txtIndex3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_3", true));
+            this.txtIndex3.Location = new System.Drawing.Point(199, 177);
             this.txtIndex3.Name = "txtIndex3";
             this.txtIndex3.Size = new System.Drawing.Size(33, 20);
             this.txtIndex3.TabIndex = 24;
@@ -657,7 +693,8 @@
             // 
             // txtIndex2
             // 
-            this.txtIndex2.Location = new System.Drawing.Point(147, 151);
+            this.txtIndex2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_2", true));
+            this.txtIndex2.Location = new System.Drawing.Point(199, 151);
             this.txtIndex2.Name = "txtIndex2";
             this.txtIndex2.Size = new System.Drawing.Size(33, 20);
             this.txtIndex2.TabIndex = 23;
@@ -665,7 +702,8 @@
             // 
             // txtIndex1
             // 
-            this.txtIndex1.Location = new System.Drawing.Point(147, 124);
+            this.txtIndex1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_1", true));
+            this.txtIndex1.Location = new System.Drawing.Point(199, 124);
             this.txtIndex1.Name = "txtIndex1";
             this.txtIndex1.Size = new System.Drawing.Size(33, 20);
             this.txtIndex1.TabIndex = 22;
@@ -673,6 +711,7 @@
             // 
             // txtIndex18
             // 
+            this.txtIndex18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_18", true));
             this.txtIndex18.Location = new System.Drawing.Point(438, 353);
             this.txtIndex18.Name = "txtIndex18";
             this.txtIndex18.Size = new System.Drawing.Size(33, 20);
@@ -681,6 +720,7 @@
             // 
             // txtIndex17
             // 
+            this.txtIndex17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_17", true));
             this.txtIndex17.Location = new System.Drawing.Point(438, 323);
             this.txtIndex17.Name = "txtIndex17";
             this.txtIndex17.Size = new System.Drawing.Size(33, 20);
@@ -689,6 +729,7 @@
             // 
             // txtIndex16
             // 
+            this.txtIndex16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_16", true));
             this.txtIndex16.Location = new System.Drawing.Point(438, 293);
             this.txtIndex16.Name = "txtIndex16";
             this.txtIndex16.Size = new System.Drawing.Size(33, 20);
@@ -697,6 +738,7 @@
             // 
             // txtIndex15
             // 
+            this.txtIndex15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_15", true));
             this.txtIndex15.Location = new System.Drawing.Point(438, 262);
             this.txtIndex15.Name = "txtIndex15";
             this.txtIndex15.Size = new System.Drawing.Size(33, 20);
@@ -705,6 +747,7 @@
             // 
             // txtIndex14
             // 
+            this.txtIndex14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_14", true));
             this.txtIndex14.Location = new System.Drawing.Point(438, 236);
             this.txtIndex14.Name = "txtIndex14";
             this.txtIndex14.Size = new System.Drawing.Size(33, 20);
@@ -713,6 +756,7 @@
             // 
             // txtIndex13
             // 
+            this.txtIndex13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_13", true));
             this.txtIndex13.Location = new System.Drawing.Point(438, 207);
             this.txtIndex13.Name = "txtIndex13";
             this.txtIndex13.Size = new System.Drawing.Size(33, 20);
@@ -721,6 +765,7 @@
             // 
             // txtIndex12
             // 
+            this.txtIndex12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_12", true));
             this.txtIndex12.Location = new System.Drawing.Point(438, 178);
             this.txtIndex12.Name = "txtIndex12";
             this.txtIndex12.Size = new System.Drawing.Size(33, 20);
@@ -729,6 +774,7 @@
             // 
             // txtIndex11
             // 
+            this.txtIndex11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_11", true));
             this.txtIndex11.Location = new System.Drawing.Point(438, 152);
             this.txtIndex11.Name = "txtIndex11";
             this.txtIndex11.Size = new System.Drawing.Size(33, 20);
@@ -737,6 +783,7 @@
             // 
             // txtIndex10
             // 
+            this.txtIndex10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "INDEX_10", true));
             this.txtIndex10.Location = new System.Drawing.Point(438, 125);
             this.txtIndex10.Name = "txtIndex10";
             this.txtIndex10.Size = new System.Drawing.Size(33, 20);
@@ -745,6 +792,7 @@
             // 
             // txtIn
             // 
+            this.txtIn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_IN", true));
             this.txtIn.Enabled = false;
             this.txtIn.Location = new System.Drawing.Point(383, 379);
             this.txtIn.Name = "txtIn";
@@ -754,6 +802,7 @@
             // 
             // txtOut2
             // 
+            this.txtOut2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_OUT", true));
             this.txtOut2.Enabled = false;
             this.txtOut2.Location = new System.Drawing.Point(383, 405);
             this.txtOut2.Name = "txtOut2";
@@ -763,6 +812,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_TOTAL", true));
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(383, 431);
             this.txtTotal.Name = "txtTotal";
@@ -772,31 +822,67 @@
             // 
             // txtOut
             // 
+            this.txtOut.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.courseBindingSource, "PAR_OUT", true));
             this.txtOut.Enabled = false;
-            this.txtOut.Location = new System.Drawing.Point(92, 381);
+            this.txtOut.Location = new System.Drawing.Point(144, 381);
             this.txtOut.Name = "txtOut";
             this.txtOut.Size = new System.Drawing.Size(33, 20);
             this.txtOut.TabIndex = 3;
             this.txtOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnAddNewCourse
+            // BottomPanel
             // 
-            this.btnAddNewCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewCourse.Location = new System.Drawing.Point(92, 428);
-            this.btnAddNewCourse.Name = "btnAddNewCourse";
-            this.btnAddNewCourse.Size = new System.Drawing.Size(143, 26);
-            this.btnAddNewCourse.TabIndex = 44;
-            this.btnAddNewCourse.Text = "Add New Course";
-            this.btnAddNewCourse.UseVisualStyleBackColor = true;
-            this.btnAddNewCourse.Click += new System.EventHandler(this.btnAddNewCourse_Click);
+            this.BottomPanel.Controls.Add(this.CancelButton);
+            this.BottomPanel.Controls.Add(this.OkButton);
+            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomPanel.Location = new System.Drawing.Point(0, 469);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(598, 32);
+            this.BottomPanel.TabIndex = 45;
             // 
-            // AddNewCourse
+            // CancelButton
+            // 
+            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelButton.Location = new System.Drawing.Point(439, 5);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.TabIndex = 1;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // OkButton
+            // 
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OkButton.Location = new System.Drawing.Point(520, 5);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(75, 23);
+            this.OkButton.TabIndex = 0;
+            this.OkButton.Text = "OK";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(600, 468);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataSource = typeof(DAL.Course);
+            // 
+            // EditCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(557, 479);
-            this.Controls.Add(this.btnAddNewCourse);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(598, 501);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.txtIndex18);
             this.Controls.Add(this.txtIndex17);
             this.Controls.Add(this.txtIndex16);
@@ -873,8 +959,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "AddNewCourse";
-            this.Text = "AddNewCourse";
+            this.Name = "EditCourse";
+            this.Text = "Course Details";
+            this.BottomPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -958,6 +1046,10 @@
         private System.Windows.Forms.TextBox txtOut2;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtOut;
-        private System.Windows.Forms.Button btnAddNewCourse;
+        private System.Windows.Forms.Panel BottomPanel;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource courseBindingSource;
     }
 }

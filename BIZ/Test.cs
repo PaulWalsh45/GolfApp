@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyGolfSocietyApp
+namespace Test
 {
-    public partial class Form1 : Form
+    public partial class Test : Form
     {
-        public Form1()
+        public Test()
         {
             InitializeComponent();
         }
 
-        private void btnEnterApplication_Click(object sender, EventArgs e)
+        private void btnAddNewPlayer_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.ShowDialog();
+            
             
         }
     }

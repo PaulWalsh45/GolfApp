@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.Properties
+namespace Test.Properties
 {
 
 

@@ -26,11 +26,11 @@ namespace MyGolfSocietyApp
 
         }
 
-        private void menuNewPlayer_Click(object sender, EventArgs e)
-        {
-            AddNewPlayer addNewPlayer = new AddNewPlayer();
-            addNewPlayer.ShowDialog();
-        }
+        //private void menuNewPlayer_Click(object sender, EventArgs e)
+        //{
+        //    EditPlayer addNewPlayer = new EditPlayer();
+        //    addNewPlayer.ShowDialog();
+        //}
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -39,15 +39,15 @@ namespace MyGolfSocietyApp
 
         private void newOutingMenuItem1_Click(object sender, EventArgs e)
         {
-            AddNewOuting newOuting = new AddNewOuting();
+            AddNewCompetition newOuting = new AddNewCompetition();
             newOuting.ShowDialog();
         }
 
-        private void newCourseMenuItem_Click(object sender, EventArgs e)
-        {
-            AddNewCourse addnewCourse = new AddNewCourse();
-            addnewCourse.ShowDialog();
-        }
+        //private void newCourseMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    EditCourse addnewCourse = new EditCourse();
+        //    addnewCourse.ShowDialog();
+        //}
 
         private void listPlayersMenuItem_Click(object sender, EventArgs e)
         {
