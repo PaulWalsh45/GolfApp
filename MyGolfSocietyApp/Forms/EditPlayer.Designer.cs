@@ -36,6 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -53,10 +54,9 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.OkButton = new System.Windows.Forms.Button();
             this.EditImageButton = new System.Windows.Forms.Button();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlayer)).BeginInit();
             this.BottomPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -117,6 +117,10 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(303, 23);
             this.txtFirstName.TabIndex = 0;
+            // 
+            // playerBindingSource
+            // 
+            this.playerBindingSource.DataSource = typeof(DAL.Player);
             // 
             // txtAddress
             // 
@@ -286,7 +290,7 @@
             // 
             // dtpJoinDate
             // 
-            this.dtpJoinDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "JOIN_DATE", true));
+            this.dtpJoinDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "JOINDATE", true));
             this.dtpJoinDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpJoinDate.Location = new System.Drawing.Point(95, 245);
             this.dtpJoinDate.Name = "dtpJoinDate";
@@ -340,10 +344,6 @@
             this.EditImageButton.UseVisualStyleBackColor = true;
             this.EditImageButton.Click += new System.EventHandler(this.EditImageButton_Click);
             // 
-            // playerBindingSource
-            // 
-            this.playerBindingSource.DataSource = typeof(DAL.Player);
-            // 
             // EditPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,9 +373,9 @@
             this.Controls.Add(this.picBoxPlayer);
             this.Name = "EditPlayer";
             this.Text = "Player Details";
+            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPlayer)).EndInit();
             this.BottomPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,7 +16,22 @@ namespace MyGolfSocietyApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test());//change this back to Form1 after testing
+            Licience licience = new Licience();
+            if (licience.Active)
+            {
+                Application.Run(new Test());//for dev
+                //Application.Run(new Form1());// for Live
+            }
+            else
+            {
+                MessageBox.Show("Your licience has expired"
+                                +Environment.NewLine
+                                +"Please contact 087-7727879 for renewal",
+                                "Licience Status",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+
         }
     }
 }

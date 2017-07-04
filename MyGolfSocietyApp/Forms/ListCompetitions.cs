@@ -23,8 +23,12 @@ namespace MyGolfSocietyApp.Competition
 
         private void PopulateGrid()
         {
+            //note breaking because TBL_COMPETITION changed
+            // entity refresh req'd
             _competitions = _dbLookup.Competitions.ToList();
             CompetitionsBindingSource.DataSource = _competitions;
+            //_competitions = _dbLookup.Competitions.ToList();
+            //CompetitionsBindingSource.DataSource = _competitions;
         }
     }
 }

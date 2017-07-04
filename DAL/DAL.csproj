@@ -62,9 +62,6 @@
     <Compile Include="Competition.cs">
       <DependentUpon>GolfModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CompetitionCategory.cs">
-      <DependentUpon>GolfModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Course.cs">
       <DependentUpon>GolfModel.tt</DependentUpon>
     </Compile>
